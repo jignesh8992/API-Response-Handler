@@ -2,7 +2,7 @@
 Handle exceptions thrown in retrofit with kotlin coroutines
 
 ## Usage
-[MainActivity](https://github.com/jignesh8992/API-Response-Handler/blob/master/app/src/main/java/com/example/responsehandler/MainActivity.kt)
+[MainActivity.kt](https://github.com/jignesh8992/API-Response-Handler/blob/master/app/src/main/java/com/example/responsehandler/MainActivity.kt)
 ```kotlin
 // Make sure the Internet is working before making any API call
 if (!isOnline()) {
