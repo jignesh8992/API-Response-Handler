@@ -1,4 +1,4 @@
-package com.example.responsehandler.network.utils
+package com.example.responsehandler.network.utilites
 
 /**
  * APIConstant.kt - Store method names and keys of methods.

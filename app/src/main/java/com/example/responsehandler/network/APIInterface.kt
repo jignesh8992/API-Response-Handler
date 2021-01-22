@@ -1,9 +1,9 @@
 package com.example.responsehandler.network
 
 import com.example.responsehandler.network.dao.ResponseForceUpdateModel
-import com.example.responsehandler.network.utils.METHOD_APK_VERSION
-import com.example.responsehandler.network.utils.keyPkgName
-import com.example.responsehandler.network.utils.keyVerCode
+import com.example.responsehandler.network.utilites.METHOD_APK_VERSION
+import com.example.responsehandler.network.utilites.keyPkgName
+import com.example.responsehandler.network.utilites.keyVerCode
 import kotlinx.coroutines.Deferred
 import retrofit2.Response
 import retrofit2.http.Field

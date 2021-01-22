@@ -1,4 +1,4 @@
-package com.example.responsehandler.utils
+package com.example.responsehandler.utilites
 
 /**
  * Constants.kt - Store constants.

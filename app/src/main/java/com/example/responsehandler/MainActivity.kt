@@ -7,9 +7,9 @@ import com.example.jdrodi.utilities.isOnline
 import com.example.jdrodi.utilities.showSnackbar
 import com.example.responsehandler.network.APIInterface
 import com.example.responsehandler.network.APIService
-import com.example.responsehandler.network.utils.METHOD_APK_VERSION
+import com.example.responsehandler.network.utilites.METHOD_APK_VERSION
 import com.example.responsehandler.network.dao.ResponseForceUpdateModel
-import com.example.responsehandler.network.utils.*
+import com.example.responsehandler.network.utilites.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.launch
 import retrofit2.Response

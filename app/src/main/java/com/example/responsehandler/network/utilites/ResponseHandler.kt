@@ -1,4 +1,4 @@
-package com.example.responsehandler.network.utils
+package com.example.responsehandler.network.utilites
 
 import android.app.AlertDialog
 import android.content.Context
@@ -11,7 +11,7 @@ import android.util.TypedValue
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.example.responsehandler.R
-import com.example.responsehandler.utils.fontPath
+import com.example.responsehandler.utilites.fontPath
 import retrofit2.HttpException
 import retrofit2.Response
 import java.io.IOException
