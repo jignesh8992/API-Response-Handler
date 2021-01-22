@@ -1,6 +1,53 @@
 # API-Response-Handler
 Handle exceptions thrown in Kotlin Android Retrofit with coroutines
 
+## Usage
+[MainActivity](https://github.com/jignesh8992/API-Response-Handler/blob/master/app/src/main/java/com/example/responsehandler/MainActivity.kt)
+```kotlin
+// Make sure the Internet is working before making any API call
+if (!isOnline()) {
+    showNoInternetAlert(object : OnPositive {
+        override fun onYes() {
+            // re-call api
+        }
+    })
+    return
+}
+
+// Internet is working so now you can make API call
+launch {
+    
+    try {               
+
+        //  Make request and wait until get response
+        val reqAPI = apiClient.<your-method>
+        val resAPI = reqAPI.await()
+
+        // Validating API response
+        if (isValidResponse(resAPI)) {                 
+            // Success: Perform your further task
+           
+        } else {
+            // Generic exception occurred
+            errorAlert(object : OnPositive {
+                override fun onYes() {
+                    // re-call api
+                }
+            })
+       
+        }
+        
+    } catch (exception: Exception) {
+        // Exception occurred
+        val errorMessage = apiExceptionHandler(exception, object : OnPositive {
+            override fun onYes() {
+                // re-call api
+            }
+        })
+    }
+}
+```
+
 
 ## Contributing
 Feel free to contribute code to Battery-Information. You can do it by forking the repository via Github and sending pull request with changes.
