@@ -1,4 +1,6 @@
 # API-Response-Handler
+Handle exceptions thrown in Kotlin Android Retrofit with coroutines
+
 
 ## Contributing
 Feel free to contribute code to Battery-Information. You can do it by forking the repository via Github and sending pull request with changes.
