@@ -1,5 +1,5 @@
 # API-Response-Handler
-Handle exceptions thrown in Kotlin Android Retrofit with coroutines
+Handle exceptions thrown in retrofit with kotlin coroutines
 
 ## Usage
 [MainActivity](https://github.com/jignesh8992/API-Response-Handler/blob/master/app/src/main/java/com/example/responsehandler/MainActivity.kt)
