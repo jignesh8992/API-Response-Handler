@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">ResponseHandler</string>
+    <string name="base_url_update">aHR0cHM6Ly92YXN1bmRoYXJhYXBwcy5jb20vYXJ0d29ya19hcHBzL2FwaS8=</string>
+    <!--Retrofit And Response Handler-->
+    <string name="please_wait">Please wait…</string>
+    <string name="connection_timeout">Connection Timeout</string>
+    <string name="timeout">Timeout</string>
+    <string name="call_cancelled">Call was cancelled forcefully</string>
+    <string name="internal_server_error">Internal Server Error</string>
+    <string name="bad_request">Bad Request</string>
+    <string name="error">Error</string>
+    <string name="network_error">Network Error</string>
+    <string name="network_offline">You are offline</string>
+    <string name="please_try_later">Please try again later</string>
+    <string name="network_vpn">You use VPN or Manual wi-fi connection. Please disable it and try again</string>
+    <string name="went_wrong">Something went wrong</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="alert">Alert</string>
+    <string name="retry">Retry</string>
+</resources>
