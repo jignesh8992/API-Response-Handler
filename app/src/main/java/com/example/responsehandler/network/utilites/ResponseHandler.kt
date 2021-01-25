@@ -69,8 +69,9 @@ fun Context.errorAlert(positive: OnPositive?) {
 }
 
 fun Context.apiExceptionHandler(error: Exception?, positive: OnPositive?): String {
+    Log.i(TAG_DEBUG_API, Throwable().stackTrace[0].methodName + ":" + error?.message.toString())
     val title: String
-    val msg: String
+    var msg: String = error?.message.toString()
     val positiveText: String = getString(R.string.retry)
     val negativeText: String = getString(R.string.cancel)
 
@@ -78,41 +79,35 @@ fun Context.apiExceptionHandler(error: Exception?, positive: OnPositive?): Strin
         when {
             error.toString().contains("java.net.UnknownHostException") -> {
                 title = getString(R.string.network_offline)
-                msg = getString(R.string.please_try_later)
             }
             error is SocketTimeoutException || error is IOException -> {
                 title = getString(R.string.connection_timeout)
-                msg = getString(R.string.please_try_later)
+                msg = "$msg, Make sure your internet connection is working properly"
             }
             error is HttpException -> {
-                when (error.code()) {
+                title = when (error.code()) {
                     HttpsURLConnection.HTTP_INTERNAL_ERROR -> {
-                        title = getString(R.string.internal_server_error)
-                        msg = getString(R.string.please_try_later)
+                        getString(R.string.internal_server_error)
                     }
                     HttpsURLConnection.HTTP_BAD_REQUEST -> {
-                        title = getString(R.string.bad_request)
-                        msg = getString(R.string.please_try_later)
+                        getString(R.string.bad_request)
                     }
                     else -> {
-                        title = getString(R.string.network_error)
-                        msg = getString(R.string.please_try_later)
+                        getString(R.string.network_error)
                     }
                 }
             }
             else -> {
                 //Generic error handling
                 title = getString(R.string.error)
-                msg = getString(R.string.went_wrong)
             }
         }
     } else {
         //Generic error handling
         title = getString(R.string.network_error)
-        msg = getString(R.string.went_wrong)
     }
 
-    println("$TAG_DEBUG_API: $title")
+    println("$TAG_DEBUG_API: $title : $msg")
     showAlert(title, msg, positiveText, negativeText, object : OnPositive {
         override fun onYes() {
             positive?.onYes()
